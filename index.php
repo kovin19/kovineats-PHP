@@ -68,7 +68,7 @@
                                     <img class="card-img-top" src="'.$platillo->logo_url.'" alt="platillo"> 
                                 </div>
                                 <div class="card-body">
-                                    <h5 class="card-title" style="text-align:center;text-transform: uppercase;">Pizza</h5>
+                                    <h5 class="card-title" style="text-align:center;text-transform: uppercase;">'.$platillo->nombre.'</h5>
                                     <i class="fas fa-utensils"></i><p class="card-text">'.$platillo->descripcion.'</p>
                                     <i class="fas fa-dollar-sign"></i><p class="card-text">'.$platillo->precio.'</p>
                                 </div>
