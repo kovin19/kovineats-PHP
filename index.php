@@ -237,11 +237,9 @@
                                             </div>
                                             <div class="col align-self-md-center">
                                                 <p class="d-flex flex-row-reverse" name="preciosCarrito" data-precio="">$'.$platillo_object->precio.'</p>
-                                                <input type="hidden" name="total" value="130.00">
-                                                <input type="hidden" name="ingredientes" value="1">
                                             </div>
                                         </div>
-                                        <input type="hidden" name="platillos" value="1">
+                                        <input type="hidden" name="platillos[]" value="'.$platillo_object->id.'">
                                     ';
                             $total_carrito = $total_carrito + (int)$platillo_object->precio;
                         }
@@ -250,6 +248,10 @@
                     <div class="modal-footer">
                         <div class="row">
                             <h3>Total: $<?php echo $total_carrito ?>.00</h3>
+                            <?php echo'
+                                <input type="hidden" name="total" value="'.$total_carrito.'">
+                            ';
+                            ?>
                         </div>
                         <div class="row">
                             <p class="d-flex justify-content-center">Por el momento solo se aceptan pagos en efectivo.</p>
